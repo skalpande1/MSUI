@@ -1,1 +1,41 @@
-<p>company works!</p>
+<div class="card">
+    <div class="card-header bg-primary text-white text-center">
+      <h3>COMPANIES DETAILS</h3>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr class="bg-info text-center text-white">
+            <td>ID</td>
+            <td>NAME</td>
+            <!-- <td>OPEN/CLOSED RATE</td>
+            <td>PEAK/LEAST RATE</td>
+            <td>CURRENT RATE</td> -->
+            <td>CODE</td>
+            <td>VOLUME</td>
+            <td>STOCK TYPE</td>
+            <td>ADDRESS</td>
+            <td>#</td>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of companies" class="text-center">
+              <td>{{c.id}}</td>
+              <td>{{c.name}}</td>
+              <!-- <td>{{c.open_rate}} / {{c.close_rate}}</td>
+              <td>{{c.peak_rate}} / {{c.least_rate}}</td>
+              <td>{{c.current_rate}}</td> -->
+              <td>{{c.market_cap_code}}</td>
+              <td>{{c.volume}}</td>
+              <td>{{c.stock_type}}</td>
+              <td>{{c.address}}</td>
+              <td>
+                <button class="btn btn-success">VIEW</button> &nbsp;
+                <button class="btn btn-warning">BUY</button>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
