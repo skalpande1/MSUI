@@ -18,6 +18,11 @@
               class="form-control"
             />
           </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.name">
+              {{errorMessages.name}}
+            </span>
+          </div>
         </div>
         <!-- new row#2 -->
         <div class="row">
@@ -32,6 +37,11 @@
               [(ngModel)]="customer.email"
               class="form-control"
             />
+          </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.email">
+              {{errorMessages.email}}
+            </span>
           </div>
         </div>
         <!-- new row -->
@@ -57,6 +67,11 @@
             />
             Female
           </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.gender">
+              {{errorMessages.gender}}
+            </span>
+          </div>
         </div>
         <!-- new row -->
         <div class="row">
@@ -71,6 +86,11 @@
               [(ngModel)]="customer.imagePath"
               class="form-control"
             />
+          </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.imagePath">
+              {{errorMessages.imagePath}}
+            </span>
           </div>
         </div>
         <!-- new row -->
@@ -87,6 +107,11 @@
               class="form-control"
             />
           </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.mobile">
+              {{errorMessages.mobile}}
+            </span>
+          </div>
         </div>
         <!-- new row -->
         <div class="row">
@@ -100,6 +125,11 @@
               [(ngModel)]="customer.address"
               class="form-control"
             ></textarea>
+          </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.address">
+              {{errorMessages.address}}
+            </span>
           </div>
         </div>
         <!-- new row -->
@@ -116,6 +146,11 @@
               class="form-control"
             />
           </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.panCardId">
+              {{errorMessages.panCardId}}
+            </span>
+          </div>
         </div>
         <!-- new row -->
         <div class="row">
@@ -130,6 +165,11 @@
               [(ngModel)]="customer.aadharId"
               class="form-control"
             />
+          </div>
+          <div class="col-5 text-danger">
+            <span *ngIf="errorMessages?.aadharId">
+              {{errorMessages.aadharId}}
+            </span>
           </div>
         </div>
         <button type="submit" class="btn btn-success">Create</button>

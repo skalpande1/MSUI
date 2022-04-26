@@ -12,6 +12,7 @@ export class CustomerCreateComponent implements OnInit {
  //declare variables
  customer : Customer = new Customer(0,'','','','','','','','');
  message : any ;
+ errorMessages : any;
  //DI
  constructor(private service: CustomerService) { }
 
@@ -25,9 +26,12 @@ export class CustomerCreateComponent implements OnInit {
        this.message = data;
        //clear form data on success
        this.customer = new Customer(0,'','','','','','','','');
+       this.errorMessages = {};
      },
      error : (error) => {
-       console.log(error);
+      this.errorMessages = JSON.parse(error.error);//text->JSON
+        console.log(this.errorMessages);
+        this.message = "";
      }
    });
  }
