@@ -1,0 +1,141 @@
+<div class="card">
+    <div class="card-header bg-primary text-center text-white">
+      <h3>CUSTOMERS REGISTER</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="createCustomer()">
+        <!-- new row#1 -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Name</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              [(ngModel)]="customer.name"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- new row#2 -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Email</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              [(ngModel)]="customer.email"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- new row -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Gender</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="radio"
+              name="gender"
+              id="gender1"
+              [(ngModel)]="customer.gender"
+              value="Male"
+            />
+            Male
+            <input
+              type="radio"
+              name="gender"
+              id="gender2"
+              [(ngModel)]="customer.gender"
+              value="Female"
+            />
+            Female
+          </div>
+        </div>
+        <!-- new row -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Image</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              name="imagePath"
+              id="imagePath"
+              [(ngModel)]="customer.imagePath"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- new row -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Mobile</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              name="mobile"
+              id="mobile"
+              [(ngModel)]="customer.mobile"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- new row -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Address</label>
+          </div>
+          <div class="col-4">
+            <textarea
+              name="address"
+              id="address"
+              [(ngModel)]="customer.address"
+              class="form-control"
+            ></textarea>
+          </div>
+        </div>
+        <!-- new row -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer PAN ID</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              name="panCardId"
+              id="panCardId"
+              [(ngModel)]="customer.panCardId"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- new row -->
+        <div class="row">
+          <div class="col-3">
+            <label> Customer Aadhar</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="text"
+              name="aadharId"
+              id="aadharId"
+              [(ngModel)]="customer.aadharId"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Create</button>
+      </form>
+    </div>
+    <div class="card-footer bg-white text-success">
+      {{message}}
+    </div>
+  </div>
